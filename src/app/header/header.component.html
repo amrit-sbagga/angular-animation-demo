@@ -1,0 +1,10 @@
+<nav>
+    <button (click)="toggleAnimations()">Toggle Animations</button>
+    <button (click)="toggle()" style="margin-left: 20px;">Toggle</button>
+</nav>
+
+<div [@.disabled]="isDisabled">
+    <div [@childanimation]="isOpen ? 'open' : 'closed'" class="open-close-container">
+        <p>This box is now {{isOpen ? 'open' : 'closed'}}</p>
+    </div>
+</div>
